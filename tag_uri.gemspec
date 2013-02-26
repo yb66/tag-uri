@@ -8,9 +8,10 @@ Gem::Specification.new do |gem|
   gem.version       = TagUri::VERSION
   gem.authors       = ["Iain Barnett"]
   gem.email         = ["iainspeed@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = %q{An implementation of tag URI's.
+  See http://tools.ietf.org/html/rfc4151}
+  gem.summary       = %q{Instead of using a permalink as the id for an Atom feed entry, use a tag URI.}
+  gem.homepage      = "https://github.com/yb66/tag-uri"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
