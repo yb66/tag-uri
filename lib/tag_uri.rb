@@ -4,7 +4,7 @@ require 'addressable/uri'
 
 # Implementation of tag URI's.
 # @see http://tools.ietf.org/html/rfc4151
-module TagUri
+module TagURI
 
   class Error < StandardError; end
   class ArgumentError < Error; end
@@ -26,15 +26,16 @@ module TagUri
   #   post = Post.create #…
   #   post.slug # => "this-is-my-first-post"
   #   post.tag_uri host: "http://example.com", prefix: "posts"
-  def tag_uri( opts={}, &failure_block )
+  def self.create( opts={}, &failure_block )
     opts = opts.dup
-    opts[:host] ||= self.host
-    opts[:slug] ||= self.slug
-    opts[:created_at] ||= self.created_at
+    opts[:created_at] ||= Time.now
     opts[:prefix] ||= ""
+
+    # error checking
+    failure_block ||= DEFAULT_FAILURE_BLOCK
+    [:created_at,:prefix,:slug,:host].all?{|arg| opts.keys.include? arg }
     opts.each do |k,v|
-      if v.nil?  
-        failure_block ||= DEFAULT_FAILURE_BLOCK
+      if v.nil?
         failure_block.call k.to_s
       end
     end

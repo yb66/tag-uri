@@ -1,3 +1,3 @@
-module TagUri
-  VERSION = "0.0.1"
+module TagURI
+  VERSION = "0.0.2"
 end

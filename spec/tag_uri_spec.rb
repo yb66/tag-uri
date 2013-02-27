@@ -12,22 +12,16 @@ describe "Generating a tag uri" do
   let(:host) { "diveintomark.org" }
   let(:prefix) { "/archives/2004/05/27" }
   let(:expected) { "tag:diveintomark.org,2004-05-27:/archives/2004/05/27/howto-atom-linkblog" }
-  let(:model) { 
-    o = OpenStruct.new created_at: created_at, slug: slug
-    o.extend TagUri
-    warn "o.respond_to? :tag_uri #{o.respond_to? :tag_uri}"
-    o
-  }
-  subject { model }
-  it { should respond_to :tag_uri }
+  let(:model) { OpenStruct.new created_at: created_at, slug: slug }
+
   context "Given arguments" do
     context "That are valid" do
-      subject { model.tag_uri prefix: prefix, host: host }
+      subject { TagURI.create prefix: prefix, host: host, created_at: model.created_at, slug: model.slug }
       it { should == expected }
     end
     context "That are not valid" do
       it "raises" do
-        expect { model.tag_uri prefix: prefix, host: nil }.to raise_error TagUri::ArgumentError
+        expect { TagURI.create prefix: prefix, host: nil, created_at: model.created_at, slug: model.slug }.to raise_error TagURI::ArgumentError
       end
     end
   end

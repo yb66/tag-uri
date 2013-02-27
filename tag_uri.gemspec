@@ -5,7 +5,7 @@ require 'tag_uri/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "tag_uri"
-  gem.version       = TagUri::VERSION
+  gem.version       = TagURI::VERSION
   gem.authors       = ["Iain Barnett"]
   gem.email         = ["iainspeed@gmail.com"]
   gem.description   = %q{An implementation of tag URI's.
