@@ -35,7 +35,6 @@ Or install it yourself as:
 Given a model:
 
     class Post < Sequel::Model # it doesn't have to be Sequel
-      include TagUri
     end
 
     post = Post.create title: "How to make a good ID in Atom"
