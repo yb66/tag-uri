@@ -44,12 +44,12 @@ Given a model:
     post.created_at
     # => 2004-05-27 00:00:00 0100
     
-    post.tag_uri prefix: "/archives/2004/05/27", host: "diveintomark.org"
+    TagURI.create prefix: "/archives/2004/05/27", host: "diveintomark.org", slug: post.slug, created_at: post.created_at
     # => "tag:diveintomark.org,2013-02-26:/archives/2004/05/27/howto-atom-linkblog"
 
 Although you'll probably do something more like this:
 
-    post.tag_uri prefix: prefix, host: request.host
+    TagURI.create slug: post.slug, created_at: post.created_at prefix: prefix, host: request.host
 
 or something like that.
 

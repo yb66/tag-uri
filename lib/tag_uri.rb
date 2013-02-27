@@ -20,12 +20,11 @@ module TagURI
   # @option opts [Time] created_at The time the resource was created. If a created_at time is not given then it is assumed that `self` will provide it.
   # @return [String]
   # @example
-  #   class Posts
-  #     include TagUri
+  #   class Posts < Sequel::Model # or whatever ORM you're using.
   #   end
   #   post = Post.create #…
   #   post.slug # => "this-is-my-first-post"
-  #   post.tag_uri host: "http://example.com", prefix: "posts"
+  #   TagURI.create host: "http://example.com", prefix: "posts", slug: post.slug, created_at: post.created_at
   def self.create( opts={}, &failure_block )
     opts = opts.dup
     opts[:created_at] ||= Time.now
