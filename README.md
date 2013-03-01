@@ -3,6 +3,11 @@
 An implementation of tag URI's.
 See http://tools.ietf.org/html/rfc4151
 
+### Build status ###
+
+Master branch:
+[![Build Status](https://travis-ci.org/yb66/tag_uri.png?branch=master)](https://travis-ci.org/yb66/tag_uri)
+
 ## Why? ##
 
 Because every Atom entry must have a globally unique ID, in the `id` element. 
