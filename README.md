@@ -43,7 +43,7 @@ Or install it yourself as:
 
 ## Usage
 
-    require 'taguri'
+    require 'tag_uri'
 
 Given a model:
 
