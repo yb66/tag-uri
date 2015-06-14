@@ -1,6 +1,14 @@
 # CH CH CH CHANGES #
 
-## Sunday the 14th of June, 2015 v1.0.0 ##
+## Sunday the 14th of June, 2015 ##
+
+### v1.0.1 ###
+
+* Improved the docs.
+
+----
+
+### v1.0.0 ###
 
 * Updated to use Ruby v2's keywords.
 * Bumped to v1.0.0 as a semver release.
