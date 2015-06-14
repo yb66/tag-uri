@@ -16,7 +16,15 @@ Because every Atom entry must have a globally unique ID, in the `id` element.
 * The ID must be globally unique, across all Atom feeds, everywhere, for all time. This part is actually easier than it sounds.
 * The ID must never, ever change.
 
-Some people use a permalink for this, but we all know that permalinks change, so use a tag URI instead. See http://web.archive.org/web/20110514113830/http://diveintomark.org/archives/2004/05/28/howto-atom-id for more.
+Some people use a permalink for this, but we all know that permalinks change, so use a tag URI instead. See the following articles for a bit more info:
+
+- [IBM developer works, Managing XML data: Tag URIs](http://www.ibm.com/developerworks/library/x-mxd6/index.html)
+- [Tag URI](http://taguri.org)
+- [How to make a good ID in Atom](http://web.archive.org/web/20110514113830/http://diveintomark.org/archives/2004/05/28/howto-atom-id)
+
+You don't have to just use it with Atom, it's also useful anywhere that a non-tied-to-location URI might make sense. As one of the linked articles states:
+
+> Tag URIs finally let URIs do what they were meant to do: identify without implying any sort of location or behavior that they don't have. They're easy to create, they're human legible, they work with existing systems, they're an open standard, and they don't have any backward compatibility issues. What's not to like?
 
 
 ## Installation
