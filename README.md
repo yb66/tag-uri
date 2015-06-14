@@ -57,6 +57,10 @@ Although you'll probably do something more like this:
 
 or something like that.
 
+## Versioning ##
+
+This library uses [semver](http://semver.org).
+
 
 ## Contributing
 
