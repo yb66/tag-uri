@@ -1,27 +1,39 @@
 # CH CH CH CHANGES #
 
-## Sunday the 14th of June, 2015 ##
+## Otherwise known as the changelog
 
-### v1.0.1 ###
+All notable changes to this project will be documented in this file.
 
-* Improved the docs.
+The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
+and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-----
 
-### v1.0.0 ###
+## Unreleased
 
-* Updated to use Ruby v2's keywords.
-* Bumped to v1.0.0 as a semver release.
+### Added
 
-----
+- Start using [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 
-### v0.0.3 ###
+### Changed
 
-* Since the Github repo is called tag-uri (because a hypen is clearer in a URL) I've added tag-uri.rb and taguri.rb to the lib to require the library in case anyone uses the wrong name.
 
-### 27th of February, 2013 v0.0.2 ###
+## [v1.0.1] - Sunday the 14th of June, 2015
 
-* Changed to be a class method, as if it's mixed in to a model then the model will likely want to use that name for the field.
-* Changed the module name, it should all be uppercase so now it is.
+- Improved the docs.
 
-----
+
+## [v1.0.0] - Sunday the 14th of June, 2015
+
+- Updated to use Ruby v2's keywords.
+- Bumped to v1.0.0 as a semver release.
+
+
+## [v0.0.3] - Wednesday the 27th of February, 2013
+
+- Since the Github repo is called tag-uri (because a hypen is clearer in a URL) I've added tag-uri.rb and taguri.rb to the lib to require the library in case anyone uses the wrong name.
+
+
+## [v0.0.2] - Wednesday the 27th of February, 2013
+
+- Changed to be a class method, as if it's mixed in to a model then the model will likely want to use that name for the field.
+- Changed the module name, it should all be uppercase so now it is.
