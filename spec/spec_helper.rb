@@ -2,6 +2,7 @@
 
 require 'rspec'
 require 'rspec/its'
+require 'rspec/given'
 Spec_dir = File.expand_path( File.dirname __FILE__ )
 
 unless Kernel.respond_to?(:require_relative)
@@ -18,6 +19,7 @@ SimpleCov.start do
   add_filter "/vendor.noindex/"
   add_filter "/coverage/"
   add_filter "/bin/"
+  add_filter "/spec/"
 end
 
 

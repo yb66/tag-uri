@@ -11,11 +11,13 @@ group :development do
   gem "maruku"
   unless RUBY_ENGINE == 'jruby' || RUBY_ENGINE == "rbx"
     gem "pry-byebug"
+    gem "rb-readline"
   end
 end
 
 group :test do
   gem "rspec"
   gem "rspec-its"
+  gem "rspec-given"
   gem "simplecov"
 end
