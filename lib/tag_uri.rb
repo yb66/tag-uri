@@ -11,8 +11,8 @@ module TagURI
 
   # @param [Hash] opts
   # @option opts [String] host The host portion e.g. http://example.com. If the host portion is not given then it is assumed that `self` will provide it.
-  # @option opts [String] slug The slugged name e.g. this-is-my-first-post. If a slug is not given then it is assumed that `self` will provide it.
-  # @option opts [String] prefix Anything you wish to tack on before the slug in the path e.g. for /posts/this-is-my-first-post pass in "prefix". If a prefix is not given then it will not be added to the string.
+  # @option opts [String] slug The slugged name e.g. this-is-my-first-post.
+  # @option opts [String] prefix Anything you wish to tack on before the slug in the path e.g. for /posts/this-is-my-first-post pass in `prefix: "/posts"`. If a prefix is not given then it will not be added to the string.
   # @option opts [Time] created_at The time the resource was created. If a created_at time is not given then it is assumed that `self` will provide it.
   # @return [String]
   # @example
