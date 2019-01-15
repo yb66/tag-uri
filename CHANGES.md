@@ -10,11 +10,23 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Unreleased
 
+
+## [v2.0.0] - Tuesday the 15th of January, 2019
+
 ### Added
 
-- Start using [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
+- Started using [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 
 ### Changed
+
+- Expanded the use of the library beyond just atom.
+- Added lots more tests.
+- The API now adheres more to the terms used in the RFC.
+- Tried to keep the laziness factor available.
+- Removed the old `TagURI.create` API (the major version change means it's a breaking change).
+- Tried to get TagURI::URI closer to the Ruby stdlib's URI API. More could probably be done here.
+- Improved the docs by adding specs that mirror the examples given.
+- Git tags will now be signed by GPG too (look in my gists for Keybase or go to [http://keybase.io/iainb](http://keybase.io/iainb) to get the key).
 
 
 ## [v1.0.1] - Sunday the 14th of June, 2015
