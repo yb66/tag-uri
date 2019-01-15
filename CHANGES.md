@@ -11,6 +11,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## Unreleased
 
 
+## [v2.0.1] - Tuesday the 15th of January, 2019
+
+### Added
+
+- Support for a more secure installation via MediumSecurity and HighSecurity options.
+
+### Changed
+
+- Updated the README to reflect the changes.
+
+
 ## [v2.0.0] - Tuesday the 15th of January, 2019
 
 ### Added
