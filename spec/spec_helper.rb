@@ -3,14 +3,12 @@
 require 'rspec'
 require 'rspec/its'
 require 'rspec/given'
-Spec_dir = File.expand_path( File.dirname __FILE__ )
+require 'timecop'
+Spec_dir = Pathname( __dir__ )
 
-unless Kernel.respond_to?(:require_relative)
-  module Kernel
-    def require_relative(path)
-      require File.join(File.dirname(caller[0]), path.to_str)
-    end
-  end
+if ENV["DEBUG"]
+  require 'pry-byebug'
+  binding.pry
 end
 
 # code coverage
@@ -27,5 +25,14 @@ Dir[ File.join( Spec_dir, "/support/**/*.rb")].each do |f|
   require f
 end
 
-# RSpec.configure do |config|
-# end
+TIME_NOW = Time.parse "2018-03-11T06:49:16+00:00"
+RSpec.configure do |config|
+
+  config.before(:each, :time_sensitive => true) do
+    Timecop.freeze TIME_NOW
+  end
+
+  config.after(:each, :time_sensitive => true) do
+    Timecop.return
+  end
+end
