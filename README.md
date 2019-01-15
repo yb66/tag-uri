@@ -128,6 +128,21 @@ Or install it yourself as:
 
     $ gem install tag_uri
 
+## Even better installation
+
+I'm trying to be a [responsible citizen regarding security](https://keybase.io/iainb) so I've followed the [instructions here](https://guides.rubygems.org/security/) and created a [public certicate](https://gist.github.com/yb66/0fb0e3007de4d4279aeaf162e0ced40a#file-yb66-pem) and signed the gem, so you can install it via:
+
+    gem cert --add <(curl -Ls https://gist.githubusercontent.com/yb66/0fb0e3007de4d4279aeaf162e0ced40a/raw/49466a801e1fd237fffe4658143a96c6cca6c961/yb66.pem)
+
+    gem install tag_uri -P MediumSecurity
+
+The MediumSecurity trust profile will verify signed gems, but allow the installation of unsigned dependencies.
+
+If all of TagURI’s dependencies are signed you can use HighSecurity.
+
+    gem install tag_uri -P HighSecurity
+
+It's just one more [good reason](https://cfoc.org/rubygems-vulnerability-can-compel-installing-malware/) to get on to gem authors and ask them to sign their gems, and ask the Rubygems authors to be [proactive with security measures](https://github.com/rubygems/rubygems/issues/2496).
 
 ## Versioning ##
 

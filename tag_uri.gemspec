@@ -19,4 +19,6 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.add_dependency("addressable")
   gem.required_ruby_version = '~> 2.0'
+  gem.cert_chain    = ['certs/yb66.pem']
+  gem.signing_key   = File.expand_path("~/.ssh/gem-private_key.pem") if $0 =~ /gem\z/
 end
