@@ -1,7 +1,7 @@
 # TagURI
 
-An implementation of tag URIs.
-See http://tools.ietf.org/html/rfc4151
+An implementation of the tag URI scheme.
+See RFC4151 http://tools.ietf.org/html/rfc4151
 
 ### Build status ###
 
